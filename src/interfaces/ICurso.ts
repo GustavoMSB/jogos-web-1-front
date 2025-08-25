@@ -4,5 +4,5 @@ export interface ICurso {
     idCurso: number;
     nomeCurso: string;
     tipoCurso: EnumCurso;
-    idCoordenadorFK: string;
+    idCoordenadorFK: string | number;
 }

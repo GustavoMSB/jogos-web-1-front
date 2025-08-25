@@ -1,19 +1,26 @@
 import { Card } from "react-bootstrap";
 import api from "../../hooks/api";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Login: React.FC = () => {
+    const navigate = useNavigate();
     const [form, setForm] = useState({
         apelidoUsuario: '',
         senha: ''
     });
+    const [errorMsg, setErrorMsg] = useState('');
 
     const submit = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         api.post('/auth/login', form).then(response => {
-            console.log(response.data);
+            if (response.status === 200) {
+                const usuario = response.data;
+                localStorage.setItem('usuario', JSON.stringify(usuario));
+                navigate('/');
+            }
         }).catch(error => {
-            console.error('There was an error!', error);
+            setErrorMsg(error.response?.data || 'There was an error!');
         });
     };
 
@@ -21,11 +28,10 @@ export const Login: React.FC = () => {
     return (
         <div className="container bg-dark text-white p-4 w-100 h-100 d-flex flex-column justify-content-center align-items-center" style={{ minHeight: '100vh', minWidth: '100vw' }}>
             <h1>Jogos IFS</h1>
-            <p>Faça login para acessar</p>
-            <Card className="py-4 px-2 ">
-                <Card.Body>
-                    <Card.Title>Login</Card.Title>
-                    <Card.Text>
+            <div>
+                <Card className="py-4 px-2 ">
+                    <Card.Body>
+                        <Card.Title>Login</Card.Title>
                         <form>
                             <div className="mb-4">
                                 <label htmlFor="apelidoUsuario" className="form-label">Username</label>
@@ -40,10 +46,11 @@ export const Login: React.FC = () => {
                                 }} />
                             </div>
                             <button type="submit" className="btn btn-primary" onClick={(e) => submit(e)}>Login</button>
+                            <p className="mt-4">{errorMsg}</p>
                         </form>
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+                    </Card.Body>
+                </Card>
+            </div>
             {/* Add your login form here */}
 
         </div>
