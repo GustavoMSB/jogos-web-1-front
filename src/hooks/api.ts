@@ -1,7 +1,7 @@
 import axios, { AxiosError } from "axios";
 
-export const baseURL = import.meta.env.VITE_REACT_APP_ENDPOINT;
-
+// export const baseURL = import.meta.env.VITE_REACT_APP_ENDPOINT;
+const baseURL = "http://localhost:8080/api";
 const headers = () => {
     const token = localStorage.getItem("token");
 
