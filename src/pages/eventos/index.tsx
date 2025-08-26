@@ -34,7 +34,7 @@ export function Eventos() {
                     {listEventos.length > 0 && listEventos.map(ev => (
                         <Col md={4} key={ev.idEvento}>
                             <Card>
-                                <Card.Title className="text-center mt-2">{ev.idEvento}</Card.Title>
+                                <Card.Title className="text-center mt-2">Evento {ev.idEvento}</Card.Title>
                                 <Card.Body>
                                     {dayjs(ev.dataHoraEvento).format("DD/MM/YYYY [às] HH:mm")}
                                 </Card.Body>

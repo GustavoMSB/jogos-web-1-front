@@ -115,7 +115,7 @@ export function Cursos() {
                     <Col md={12} className="mt-4">
                         <div className="d-flex justify-content-between align-items-center mb-3">
                             <h4>Lista de Cursos</h4>
-                            <Button className="btn btn-primary" onClick={() => setShowDialog(true)}>Adicionar Campus</Button>
+                            <Button className="btn btn-primary" onClick={() => setShowDialog(true)}>Adicionar Curso</Button>
                         </div>
                         <Table striped bordered hover variant="dark">
                             <thead>
@@ -160,7 +160,7 @@ export function Cursos() {
             </Container>
             <Dialog
                 show={showDialog}
-                title={form.idCurso && form.idCurso > 0 ? "Editar Cursos" : "Adicionar Cursos"}
+                title={form.idCurso && form.idCurso > 0 ? "Editar Curso" : "Adicionar Curso"}
                 onClose={() => {
 
                     setShowDialog(false)

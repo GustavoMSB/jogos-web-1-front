@@ -12,6 +12,8 @@ import { Grupos } from "../pages/grupo";
 import { Jogos } from "../pages/jogos";
 import { Usuarios } from "../pages/usuarios";
 import { Evento } from "../pages/eventos/[id]";
+import { EsporteByEvento } from "../pages/eventos/esporte/[id]";
+import { JogosDoGrupo } from "../pages/grupo/jogos/[id]";
 
 export const Routes: React.FC = () => (
     <Switch>
@@ -23,7 +25,10 @@ export const Routes: React.FC = () => (
         <Route path="/esportes" element={<Esportes />} />
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/eventos/:id" element={<Evento />} />
+        <Route path="/eventos/:id_evento/esportes/:id_esporte" element={<EsporteByEvento />} />
         <Route path="/grupos" element={<Grupos />} />
+        <Route path="/grupos/:id_grupo/jogos/" element={<JogosDoGrupo />} />
+
         <Route path="/jogos" element={<Jogos />} />
         <Route path="/usuarios" element={<Usuarios />} />
 

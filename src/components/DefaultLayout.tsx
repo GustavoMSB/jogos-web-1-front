@@ -15,12 +15,12 @@ export function DefaultContainer({ children }: ContainerProps) {
         { path: "/", label: "Dashboard" },
         { path: "/campus", label: "Campus" },
         { path: "/cursos", label: "Cursos" },
-        { path: "/equipes", label: "Equipes" },
+        // { path: "/equipes", label: "Equipes" },
         { path: "/esportes", label: "Esportes" },
         { path: "/eventos", label: "Eventos" },
-        { path: "/grupos", label: "Grupos" },
-        { path: "/jogos", label: "Jogos" },
-        { path: "/usuarios", label: "Usuários" },
+        // { path: "/grupos", label: "Grupos" },
+        // { path: "/jogos", label: "Jogos" },
+        // { path: "/usuarios", label: "Usuários" },
     ];
 
     return (

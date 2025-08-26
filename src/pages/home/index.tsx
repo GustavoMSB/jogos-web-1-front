@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={3} className="text-center mt-4">
+                    {/* <Col md={3} className="text-center mt-4">
                         <Card className="bg-light">
                             <Card.Body>
                                 <Card.Title>Esportes</Card.Title>
@@ -35,7 +35,7 @@ export const Home: React.FC = () => {
                                 </Card.Footer>
                             </Card.Body>
                         </Card>
-                    </Col>
+                    </Col> */}
                     <Col md={3} className="text-center mt-4">
                         <Card className="bg-light">
                             <Card.Body>
@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={3} className="text-center mt-4">
+                    {/* <Col md={3} className="text-center mt-4">
                         <Card className="bg-light">
                             <Card.Body>
                                 <Card.Title>Usuários</Card.Title>
@@ -61,7 +61,7 @@ export const Home: React.FC = () => {
                                 </Card.Footer>
                             </Card.Body>
                         </Card>
-                    </Col>
+                    </Col> */}
                     <Col md={3} className="text-center mt-4">
                         <Card className="bg-light">
                             <Card.Body>
@@ -75,7 +75,7 @@ export const Home: React.FC = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col md={3} className="text-center mt-4">
+                    {/* <Col md={3} className="text-center mt-4">
                         <Card className="bg-light">
                             <Card.Body>
                                 <Card.Title>Grupos</Card.Title>
@@ -87,7 +87,7 @@ export const Home: React.FC = () => {
                                 </Card.Footer>
                             </Card.Body>
                         </Card>
-                    </Col>
+                    </Col> */}
                 </Row>
             </div>
         </DefaultContainer>

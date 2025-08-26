@@ -19,4 +19,7 @@ export interface IJogo {
     fase: string;
     ordemJogo: number;
     grupo: IGrupo;
+    nomeEquipe1: string;
+    nomeEquipe2: string;
+    nomeEsporte: string;
 }
